@@ -25,13 +25,13 @@ pipeline {
         stage('Upload Docker Image to AWS ECR') {
             steps {
 			   script {
-			      withDockerRegistry([credentialsId:'ecr:ap-south-1:ecr-credentials', url:"708589318365.dkr.ecr.ap-south-1.amazonaws.com/makemyplanone"]){
+			      withDockerRegistry([credentialsId:'ecr:ap-south-1:makemyplanone-ecr', url:"708589318365.dkr.ecr.ap-south-1.amazonaws.com/makemyplanone"]){
                   sh """
 				  echo "Tagging the Docker Image: In Progress"
-				  docker tag makemyplanone:latest 340866772701.dkr.ecr.ap-south-1.amazonaws.com/makemyplanone:$TAG
+				  docker tag makemyplanone:latest 708589318365.dkr.ecr.ap-south-1.amazonaws.com/makemyplanone:$TAG
 				  echo "Tagging the Docker Image: Completed"
 				  echo "Push Docker Image to ECR : In Progress"
-				  docker push 340866772701.dkr.ecr.ap-south-1.amazonaws.com/makemyplanone:latest
+				  docker push 708589318365.dkr.ecr.ap-south-1.amazonaws.com/makemyplanone:latest
 				  echo "Push Docker Image to ECR : Completed"
 				  """
 				  }
