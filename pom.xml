@@ -75,7 +75,7 @@
 
 				<plugin>
 					<groupId>org.jacoco</groupId>
-					<artifactIgit d>jacoco-maven-plugin</artifactIgitd>
+					<artifactId>jacoco-maven-plugin</artifactId>
 					<version>${jacoco.maven.plugin.version}</version>
 				</plugin>
 
