@@ -26,7 +26,7 @@ pipeline {
 				  docker tag makemyplanone:latest 708589318365.dkr.ecr.ap-south-1.amazonaws.com/makemyplanone:1.0.1
 				  echo "Tagging the Docker Image: Completed"
 				  echo "Push Docker Image to ECR : In Progress"
-				  docker push 708589318365.dkr.ecr.ap-south-1.amazonaws.com/makemyplanone:latest
+				  docker push 708589318365.dkr.ecr.ap-south-1.amazonaws.com/makemyplanone:1.0.1
 				  echo "Push Docker Image to ECR : Completed"
 				  """
 				  }
