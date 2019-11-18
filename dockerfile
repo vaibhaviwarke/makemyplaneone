@@ -2,7 +2,7 @@
 FROM tomcat
 MAINTAINER vaibhavi.warke79@gmail.com
 # copy war file on to container
-ADD ./target/makemyplaneone.war /usr/local/tomcat/webapps/
+ADD /var/lib/jenkins/workspace/makemyplan/target/makemyplanone/makemyplaneone.war /usr/local/tomcat/webapps/
 EXPOSE  8080
 USER makemyplaneone
 WORKDIR /usr/local/tomcat/webapps
